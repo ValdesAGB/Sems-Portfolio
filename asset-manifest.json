@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/Sems/static/js/main.55d12b1e.js",
+    "static/media/designer.jpg": "/Sems/static/media/designer.d7055ea7cb75e2d34980.jpg",
+    "static/media/projet1.png": "/Sems/static/media/projet1.3be07b11068637023a1d.png",
+    "index.html": "/Sems/index.html",
+    "main.55d12b1e.js.map": "/Sems/static/js/main.55d12b1e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.55d12b1e.js"
+  ]
+}
