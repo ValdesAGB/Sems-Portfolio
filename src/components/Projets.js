@@ -1,9 +1,71 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import projet1 from '../assets/projet1.png'
+import styled, { keyframes } from 'styled-components'
 
 function Projets() {
-  const mess =
-    "Un pop s'ouvrira pour détailler ce projets                                          "
+  const mess = "Un pop s'ouvrira pour détailler ce projet"
+
+  const [alert, setAlert] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const contactElem = document.getElementById('listProjets')
+      const top = contactElem.getBoundingClientRect().top
+      if (top < window.innerHeight && top > 0) {
+        setAlert(true)
+      }
+    }
+
+    handleScroll()
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const fadeInLeft = keyframes`
+0% {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+100% {
+  opacity: 1;
+  transform: translateX(0);
+}
+`
+
+  const fadeInRight = keyframes`
+from {
+  opacity: 0;
+  transform: translateX(50px);
+}
+to {
+  opacity: 1;
+  transform: translateX(0);
+}
+`
+
+  const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+`
+
+  const FadeInLeftDiv = styled.div`
+    animation: ${fadeInLeft} 1s ease;
+  `
+
+  const FadeInRightDiv = styled.div`
+    animation: ${fadeInRight} 1s ease;
+  `
+  const FadeInUpDiv = styled.div`
+    animation: ${fadeInUp} 1s ease;
+  `
   return (
     <React.Fragment>
       <section className=" container my-5" id="projets">
@@ -15,9 +77,9 @@ function Projets() {
         </div>
 
         <div className="row justify-content-center">
-          <div className="col-12  col-md-6 row">
-            <div
-              className="col-12 mb-5 mb-md-0 col-md"
+          <div className="col-12  col-md-6 row" id="listProjets">
+            <FadeInLeftDiv
+              className="col-12 mb-5 mb-md-0 col-md "
               style={{ height: '100px' }}
             >
               <img
@@ -38,9 +100,9 @@ function Projets() {
                   Création de motifs {'>'}
                 </button>
               </div>
-            </div>
+            </FadeInLeftDiv>
 
-            <div className="col-12 mb-5 mb-md-0 col-md">
+            <FadeInRightDiv className="col-12 mb-5 mb-md-0 col-md">
               <div
                 className="p-2 rounded "
                 style={{ backgroundColor: '#950202', height: '100px' }}
@@ -58,9 +120,9 @@ function Projets() {
                   Création Graphique {'>'}
                 </button>
               </div>
-            </div>
+            </FadeInRightDiv>
 
-            <div className="col-12 my-0 my-md-2">
+            <FadeInUpDiv className="col-12 my-0 my-md-2">
               <div
                 className="p-2 rounded "
                 style={{ backgroundColor: '#12508e', height: '100px' }}
@@ -78,7 +140,7 @@ function Projets() {
                   Identité Visuelle de IWARI BENIN {'>'}
                 </button>
               </div>
-            </div>
+            </FadeInUpDiv>
 
             <div className=" row text-center my-2">
               <span className="col-12 col-md" style={{ fontSize: '10px' }}>

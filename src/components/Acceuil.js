@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 function Acceuil() {
   const welcome = `Hello everyone! Mon nom est Sems Clarita`
@@ -19,18 +19,51 @@ function Acceuil() {
     color: red;
   `
 
+  const fadeInLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
+  const fadeInRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
+  const AnimatedDivLeft = styled.h5`
+    animation: ${fadeInLeft} 1s ease;
+  `
+  const AnimatedDivRight = styled.h2`
+    animation: ${fadeInRight} 1s ease;
+  `
+
   return (
     <React.Fragment>
       <SectionAccueil className="py-0 py-md-5" id="accueil">
         <div className="container my-4 my-md-5">
           <div className="row justify-content-center ">
             <ContentDiv className="col-12 col-md-8 col-lg-5 text-center">
-              <h5 className="welcome fw-light ">{welcome}</h5>
-              <h2 className="my-4 my-md-3 post fw-light">
+              <AnimatedDivLeft className="welcome fw-light ">
+                {welcome}
+              </AnimatedDivLeft>
+              <AnimatedDivRight className="my-4 my-md-3 post fw-light">
                 Je suis
                 <span className="postBrand fw-bold"> {post}</span>
-              </h2>
-              <h5 className="enjoy fw-lighter">{enjoy}</h5>
+              </AnimatedDivRight>
+              <AnimatedDivLeft className="enjoy fw-lighter">
+                {enjoy}
+              </AnimatedDivLeft>
             </ContentDiv>
           </div>
         </div>

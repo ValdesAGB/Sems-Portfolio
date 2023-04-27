@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import designer from '../assets/designer.jpg'
 
 function APropos() {
@@ -14,8 +14,23 @@ function APropos() {
     color: white;
   `
 
-  const ImageDiv = styled.div`
-    border-radius: 100%;
+  const zoomInAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+`
+
+  const AnimatedCover = styled.img`
+    animation: ${zoomInAnimation} 1s both;
   `
 
   return (
@@ -51,7 +66,7 @@ function APropos() {
             </div>
             <div className="col-12 col-md row justify-content-center my-5  mx-1 mx-md-0 my-md-0 ">
               <div className="col-md-6 ">
-                <img
+                <AnimatedCover
                   src="https://img.freepik.com/photos-premium/portrait-souriant-psychologue-femme-professionnelle-assis-dans-son-bureau_23-2148026303.jpg"
                   alt="designer-cover"
                   className="w-100 rounded-2"

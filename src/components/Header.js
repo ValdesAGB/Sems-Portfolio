@@ -31,7 +31,7 @@ function Header() {
             </Brand>
           </a>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -39,7 +39,10 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span
+              className="bi bi-list "
+              style={{ color: 'red', fontSize: '1.5em' }}
+            ></span>
           </button>
           <div
             className="collapse navbar-collapse row justify-content-center"
