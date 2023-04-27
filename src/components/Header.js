@@ -19,36 +19,56 @@ function Header() {
 
   return (
     <React.Fragment>
-      <header className="py-2 fixed-top bg-white ">
-        <div className="container">
-          <div className="row align-items-center ">
-            <a href="#accueil" className="col text-decoration-none">
-              <Brand>
-                Clar
-                <span style={{ fontFamily: fontFamilly.brand, color: 'red' }}>
-                  i
-                </span>
-                ta
-              </Brand>
-            </a>
-            <div className="row col-8 px-5 fw-bold text-center">
+      <nav className="navbar navbar-expand-md bg-body-tertiary fixed-top bg-white">
+        <div className="container-fluid">
+          <a href="#accueil" className="navbar-brand col text-decoration-none ">
+            <Brand>
+              Clar
+              <span style={{ fontFamily: fontFamilly.brand, color: 'red' }}>
+                i
+              </span>
+              ta
+            </Brand>
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="collapse navbar-collapse row justify-content-center"
+            id="navbarSupportedContent"
+          >
+            <div className="navbar-nav row col-10 col-md-9 px-5 px-md-0 mx-md-2 align-items-center fw-bold  text-center">
               {headerElements.map(({ id, title }) => (
                 <Menu
-                  href={`#${id}`}
                   key={id}
-                  className={`col `}
-                  style={{ color: `${id === 'accueil' ? 'red' : 'black'}` }}
+                  href={`#${id}`}
+                  className={`nav-item my-4 m-0 m-md-1 m-lg-4 col `}
+                  style={{
+                    color: `${id === 'accueil' ? 'red' : 'black'}`,
+                  }}
                 >
                   {title}
                 </Menu>
               ))}
             </div>
-            <a href="#contact" className="text-decoration-none col text-end">
+
+            <a
+              href="#contact"
+              className="text-decoration-none col row justify-content-center"
+            >
               {allButton.contact}
             </a>
           </div>
         </div>
-      </header>
+      </nav>
     </React.Fragment>
   )
 }

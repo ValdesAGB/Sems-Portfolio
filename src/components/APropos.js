@@ -20,19 +20,46 @@ function APropos() {
 
   return (
     <React.Fragment>
-      <SectionAPropos>
-        <div className="container my-5" id="apropos">
-          <div className="mb-3">
-            <h3>{title.toUpperCase()}</h3>
-            <div className="col-2 p-1 bg-white"></div>
+      <SectionAPropos id="apropos">
+        <div className="container my-5">
+          <div className="mb-3 row justify-content-center justify-content-md-start">
+            <div className="col-12  ">
+              <h3 className=" text-center text-md-start ">
+                {title.toUpperCase()}
+              </h3>
+            </div>
+            <div className="col-5 col-md-2 ms-0 ms-md-3 p-1 bg-white"></div>
           </div>
+
           <div className="row align-items-center">
-            <div className="col-4">
-              <p className="fw-light">
+            <div className="col-12 col-md-4 my-2 my-md-0">
+              <p className="fw-lighter text-center text-md-start">
                 Brand Designer depuis plusieurs années; je sais faire ressortir
                 le meilleur de votre activité avec des designs uniques et
                 convaincants.
               </p>
+              <button
+                className="btn bg-white rounded-5 text-danger d-none d-md-block"
+                onClick={() =>
+                  alert(
+                    'Via ce bouton vous pourrez télécharger le CV du sujet.'
+                  )
+                }
+              >
+                Télécharger mon CV
+              </button>
+            </div>
+            <div className="col-12 col-md row justify-content-center my-5  mx-1 mx-md-0 my-md-0 ">
+              <div className="col-md-6 ">
+                <img
+                  src="https://img.freepik.com/photos-premium/portrait-souriant-psychologue-femme-professionnelle-assis-dans-son-bureau_23-2148026303.jpg"
+                  alt="designer-cover"
+                  className="w-100 rounded-2"
+                />
+              </div>
+            </div>
+
+            <div className="text-center d-md-none">
               <button
                 className="btn bg-white rounded-5 text-danger"
                 onClick={() =>
@@ -43,13 +70,6 @@ function APropos() {
               >
                 Télécharger mon CV
               </button>
-            </div>
-            <div className="col-4 offset-3">
-              <img
-                src="https://img.freepik.com/photos-premium/portrait-souriant-psychologue-femme-professionnelle-assis-dans-son-bureau_23-2148026303.jpg"
-                alt="designer-cover"
-                className="w-100 rounded-2"
-              />
             </div>
           </div>
         </div>

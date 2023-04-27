@@ -24,6 +24,9 @@ function Services() {
     }
   `
 
+  const mess =
+    "Au clic, un pop s'ouvrira pour vous donnez plus d'informations sur ce service."
+
   return (
     <React.Fragment>
       <section className="container" id="services">
@@ -36,30 +39,22 @@ function Services() {
                 {secondrstPartTitle.toUpperCase()}
               </span>
             </H2>
-            <UnderLine className="col-2 p-1"></UnderLine>
+            <UnderLine className="col-4 col-md-3 col-lg-2 p-1"></UnderLine>
           </div>
 
-          <div className="row justify-content-center mt-5 mb-2">
-            <div className="col-6 row">
+          <div className="row justify-content-center mt-5 mb-4 mb-md-2">
+            <div className="col-12 col-md-6 row">
               <Div
-                onClick={() =>
-                  alert(
-                    "Au clic, un pop s'ouvrira pour vous donnez plus d'informations sur ce service."
-                  )
-                }
-                className="border rounded-4 p-2 text-center col-4"
+                onClick={() => alert(mess)}
+                className="border rounded-4 p-2 text-center col-12 col-md-4 mb-4 mb-md-0"
               >
                 <i className="bi bi-vector-pen fs-2"></i>
                 <h5 style={{ color: 'blue' }}>Design Graphic</h5>
               </Div>
 
               <Div
-                onClick={() =>
-                  alert(
-                    "Au clic, un pop s'ouvrira pour vous donnez plus d'informations sur ce service."
-                  )
-                }
-                className="border rounded-4 p-2 text-center col-7 offset-1"
+                onClick={() => alert(mess)}
+                className="border rounded-4 p-2 text-center col-12 col-md-7 offset-0 offset-md-1"
               >
                 <img
                   className="mb-2"
@@ -70,15 +65,12 @@ function Services() {
               </Div>
             </div>
           </div>
+
           <div className="row justify-content-center ">
-            <div className="col-6 row">
+            <div className="col-12 col-md-6 row">
               <Div
-                onClick={() =>
-                  alert(
-                    "Au clic, un pop s'ouvrira pour vous donnez plus d'informations sur ce service."
-                  )
-                }
-                className="border rounded-4 p-2 text-center col-4"
+                onClick={() => alert(mess)}
+                className="border rounded-4 p-2 text-center col-12 col-md-4 mb-4 mb-md-0"
               >
                 <img
                   className="mb-2"
@@ -89,12 +81,8 @@ function Services() {
               </Div>
 
               <Div
-                onClick={() =>
-                  alert(
-                    "Au clic, un pop s'ouvrira pour vous donnez plus d'informations sur ce service."
-                  )
-                }
-                className="border rounded-4 p-2 text-center col-7 offset-1"
+                onClick={() => alert(mess)}
+                className="border rounded-4 p-2 text-center col-12 col-md-7 offset-0 offset-md-1"
               >
                 <img className="mb-2" src={webDegin} alt="design éditorial" />
                 <h5 style={{ color: 'blue' }}>Web Design</h5>

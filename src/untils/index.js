@@ -15,5 +15,7 @@ const Contact = styled.button`
 `
 
 export const allButton = {
-  contact: <Contact className="btn rounded-5">Contactez-moi</Contact>,
+  contact: (
+    <Contact className="btn rounded-5 col-6 col-md">Contactez-moi</Contact>
+  ),
 }

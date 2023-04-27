@@ -2,6 +2,8 @@ import React from 'react'
 import projet1 from '../assets/projet1.png'
 
 function Projets() {
+  const mess =
+    "Un pop s'ouvrira pour détailler ce projets                                          "
   return (
     <React.Fragment>
       <section className=" container my-5" id="projets">
@@ -11,9 +13,13 @@ function Projets() {
             <span className="text-dark"> PROJETS</span>
           </h2>
         </div>
+
         <div className="row justify-content-center">
-          <div className="col-6 row">
-            <div className="col" style={{ height: '100px' }}>
+          <div className="col-12  col-md-6 row">
+            <div
+              className="col-12 mb-5 mb-md-0 col-md"
+              style={{ height: '100px' }}
+            >
               <img
                 src={projet1}
                 alt="projet-1"
@@ -22,9 +28,7 @@ function Projets() {
 
               <div style={{ marginTop: '-20px' }}>
                 <button
-                  onClick={() =>
-                    alert("Un pop s'ouvrira pour détailler ce projets")
-                  }
+                  onClick={() => alert(mess)}
                   className="btn text-white w-100  fw-bold"
                   style={{
                     backgroundColor: '#2782de',
@@ -36,16 +40,14 @@ function Projets() {
               </div>
             </div>
 
-            <div className="col">
+            <div className="col-12 mb-5 mb-md-0 col-md">
               <div
                 className="p-2 rounded "
                 style={{ backgroundColor: '#950202', height: '100px' }}
               ></div>
               <div style={{ marginTop: '-20px' }}>
                 <button
-                  onClick={() =>
-                    alert("Un pop s'ouvrira pour détailler ce projets")
-                  }
+                  onClick={() => alert(mess)}
                   className="btn w-100  fw-bold"
                   style={{
                     backgroundColor: 'white',
@@ -58,16 +60,14 @@ function Projets() {
               </div>
             </div>
 
-            <div className="col-12 my-2">
+            <div className="col-12 my-0 my-md-2">
               <div
                 className="p-2 rounded "
                 style={{ backgroundColor: '#12508e', height: '100px' }}
               ></div>
               <div style={{ marginTop: '-20px' }}>
                 <button
-                  onClick={() =>
-                    alert("Un pop s'ouvrira pour détailler ce projets")
-                  }
+                  onClick={() => alert(mess)}
                   className="btn w-100  fw-bold"
                   style={{
                     backgroundColor: 'white',
@@ -80,20 +80,20 @@ function Projets() {
               </div>
             </div>
 
-            <div className=" row text-center">
-              <span className="col" style={{ fontSize: '10px' }}>
+            <div className=" row text-center my-2">
+              <span className="col-12 col-md" style={{ fontSize: '10px' }}>
                 <span className="fw-bold" style={{ color: '#2882de' }}>
                   + 1000{' '}
                 </span>
                 PROJETS
               </span>
-              <span className="col" style={{ fontSize: '10px' }}>
+              <span className="col-12 col-md" style={{ fontSize: '10px' }}>
                 <span className="fw-bold" style={{ color: '#2882de' }}>
                   + 900{' '}
                 </span>
                 AVIS POSITIFS
               </span>
-              <span className="col" style={{ fontSize: '10px' }}>
+              <span className="col-12 col-md" style={{ fontSize: '10px' }}>
                 <span className="fw-bold" style={{ color: '#2882de' }}>
                   + 500{' '}
                 </span>
