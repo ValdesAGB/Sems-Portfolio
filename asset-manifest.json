@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/Sems-Portfolio/static/js/main.6981890b.js",
+    "main.js": "/Sems-Portfolio/static/js/main.9c0a7a86.js",
     "static/media/designer.jpg": "/Sems-Portfolio/static/media/designer.d7055ea7cb75e2d34980.jpg",
     "static/media/projet1.png": "/Sems-Portfolio/static/media/projet1.3be07b11068637023a1d.png",
     "index.html": "/Sems-Portfolio/index.html",
-    "main.6981890b.js.map": "/Sems-Portfolio/static/js/main.6981890b.js.map"
+    "main.9c0a7a86.js.map": "/Sems-Portfolio/static/js/main.9c0a7a86.js.map"
   },
   "entrypoints": [
-    "static/js/main.6981890b.js"
+    "static/js/main.9c0a7a86.js"
   ]
 }
