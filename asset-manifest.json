@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.js": "/Sems-Portfolio/static/js/main.9158b22a.js",
-    "static/media/designer.jpg": "/Sems-Portfolio/static/media/designer.d7055ea7cb75e2d34980.jpg",
+    "main.js": "/Sems-Portfolio/static/js/main.2b7b65f2.js",
     "static/media/projet1.png": "/Sems-Portfolio/static/media/projet1.3be07b11068637023a1d.png",
+    "static/media/Forme Ble.svgz": "/Sems-Portfolio/static/media/Forme Ble.16e4f46a0ac72d7472a3.svgz",
+    "static/media/Blue.png": "/Sems-Portfolio/static/media/Blue.e2b8009e0d65bd1c4162.png",
     "index.html": "/Sems-Portfolio/index.html",
-    "main.9158b22a.js.map": "/Sems-Portfolio/static/js/main.9158b22a.js.map"
+    "main.2b7b65f2.js.map": "/Sems-Portfolio/static/js/main.2b7b65f2.js.map"
   },
   "entrypoints": [
-    "static/js/main.9158b22a.js"
+    "static/js/main.2b7b65f2.js"
   ]
 }
