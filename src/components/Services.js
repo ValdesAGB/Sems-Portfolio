@@ -58,16 +58,16 @@ function Services() {
     transform: translateX(0);
   }
   `
-
+  const temps = `900ms`
   const FadeInLeftDiv = styled.div`
-    animation: ${fadeInLeft} 1s ease;
+    animation: ${fadeInLeft} ${temps} ease;
     &:hover {
       cursor: pointer;
     }
   `
 
   const FadeInRightDiv = styled.div`
-    animation: ${fadeInRight} 2s ease;
+    animation: ${fadeInRight} ${temps} ease;
     &:hover {
       cursor: pointer;
     }

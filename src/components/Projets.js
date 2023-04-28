@@ -5,7 +5,7 @@ import styled, { keyframes } from 'styled-components'
 function Projets() {
   const mess = "Un pop s'ouvrira pour détailler ce projet"
 
-  const [alert, setAlert] = useState(false)
+  const [alerts, setAlert] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,16 +55,16 @@ to {
     transform: none;
   }
 `
-
+  const temps = '900ms'
   const FadeInLeftDiv = styled.div`
-    animation: ${fadeInLeft} 1s ease;
+    animation: ${fadeInLeft} ${temps} ease;
   `
 
   const FadeInRightDiv = styled.div`
-    animation: ${fadeInRight} 1s ease;
+    animation: ${fadeInRight} ${temps} ease;
   `
   const FadeInUpDiv = styled.div`
-    animation: ${fadeInUp} 1s ease;
+    animation: ${fadeInUp} ${temps} ease;
   `
   return (
     <React.Fragment>

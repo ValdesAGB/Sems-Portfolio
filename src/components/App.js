@@ -13,7 +13,7 @@ function App() {
     padding: 0.5px;
   `
   const GlobalStyle = createGlobalStyle`
-  *{
+  body{
     font-family: "Montserrat";
   }
   `

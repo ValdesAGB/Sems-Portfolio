@@ -1,16 +1,15 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import forme from '../assets/Forme.png'
 
 function Acceuil() {
   const welcome = `Hello everyone! Mon nom est Sems Clarita`
   const post = `Brand Designer`
   const enjoy = ` J'ai hâte de vous en dire plus sur moi et vous montrer mes travaux.`
   const SectionAccueil = styled.section`
-    background: linear-gradient(
-      90deg,
-      rgba(47, 132, 218, 1) 35%,
-      rgba(38, 127, 218, 1) 100%
-    );
+    background-image: url(${forme});
+    background-size: cover;
+    background-repeat: no-repeat;
   `
   const ContentDiv = styled.div`
     color: white;
@@ -61,7 +60,7 @@ function Acceuil() {
                 Je suis
                 <span className="postBrand fw-bold"> {post}</span>
               </AnimatedDivRight>
-              <AnimatedDivLeft className="enjoy fw-lighter">
+              <AnimatedDivLeft className="enjoy fw-light">
                 {enjoy}
               </AnimatedDivLeft>
             </ContentDiv>

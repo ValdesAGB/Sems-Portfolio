@@ -1,16 +1,14 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import designer from '../assets/designer.jpg'
+import gbBlue from '../assets/Blue.png'
 
 function APropos() {
   const title = `à propos de moi`
 
   const SectionAPropos = styled.section`
-    background: linear-gradient(
-      90deg,
-      rgba(47, 132, 218, 1) 35%,
-      rgba(38, 127, 218, 1) 100%
-    );
+    background-image: url(${gbBlue});
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
   `
 
@@ -48,7 +46,7 @@ function APropos() {
 
           <div className="row align-items-center">
             <div className="col-12 col-md-4 my-2 my-md-0">
-              <p className="fw-lighter text-center text-md-start">
+              <p className="fw-light text-center text-md-start">
                 Brand Designer depuis plusieurs années; je sais faire ressortir
                 le meilleur de votre activité avec des designs uniques et
                 convaincants.

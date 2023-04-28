@@ -1,12 +1,12 @@
 import React from 'react'
 import { headerElements } from '../data'
 import styled from 'styled-components'
-import { allButton, fontFamilly } from '../untils'
+import { allButton } from '../untils'
 
 function Header() {
   const Brand = styled.h3`
-    font-family: ${fontFamilly.brand};
     color: #2882de;
+    font-weight: bolder;
     &:hover {
       cursor: pointer;
     }
@@ -22,11 +22,9 @@ function Header() {
       <nav className="navbar navbar-expand-md bg-body-tertiary fixed-top bg-white">
         <div className="container-fluid">
           <a href="#accueil" className="navbar-brand col text-decoration-none ">
-            <Brand>
+            <Brand className="fw-bolder">
               Clar
-              <span style={{ fontFamily: fontFamilly.brand, color: 'red' }}>
-                i
-              </span>
+              <span style={{ color: 'red' }}>i</span>
               ta
             </Brand>
           </a>
@@ -53,7 +51,7 @@ function Header() {
                 <Menu
                   key={id}
                   href={`#${id}`}
-                  className={`nav-item my-4 m-0 m-md-1 m-lg-4 col `}
+                  className={`nav-item my-4 m-0 m-md-1 m-lg-4 col  `}
                   style={{
                     color: `${id === 'accueil' ? 'red' : 'black'}`,
                   }}
